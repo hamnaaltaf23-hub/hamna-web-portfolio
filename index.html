@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Hamna Altaf | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Hamna Altaf</div>
+    <div class="three-dots" id="threeDotsBtn">
+      <i class="fas fa-ellipsis-v"></i>
+    </div>
+    <nav class="dropdown-nav" id="dropdownNav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#educational">Educational Background</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#tech-skills">Technical Skills</a></li>
+        <li><a href="#soft-skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="section hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Hi, I'm <span class="highlight">Hamna Altaf</span></h1>
+        <p class="tagline">I'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+        <p class="intro-text">I am a Full Stack Web Developer with expertise in creating dynamic, responsive, and secure websites from concept to deployment with 2+ years experience. Skilled in both front-end and back-end development, with a focus on delivering efficient, scalable, and visually appealing digital solutions. Adept at problem-solving, collaborating in team environments, and leveraging modern development tools and frameworks to transform ideas into impactful web experiences.</p>
+        <a href="#contact" class="btn-primary">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-wrapper">
+        <div class="about-text">
+          <p>I am a dedicated Computer Science student with a passion for building innovative solutions. My academic journey has equipped me with strong programming fundamentals and a keen interest in web development, databases, and artificial intelligence. I thrive in collaborative environments and am constantly seeking opportunities to apply my knowledge to real-world challenges.</p>
+          <p>My goal is to leverage my skills in a dynamic internship where I can contribute to meaningful projects while growing as a professional. I bring strong problem-solving abilities, excellent time management, and a commitment to delivering quality work.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card"><div class="stat-number" data-target="3.44">0</div><div class="stat-label">Current CGPA</div></div>
+          <div class="stat-card"><div class="stat-number" data-target="7">0</div><div class="stat-label">Semester</div></div>
+          <div class="stat-card"><div class="stat-number" data-target="3">0+</div><div class="stat-label">Projects Completed</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educational Background (renamed and ICS capitalized) -->
+  <section id="educational" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title">Educational Background</h2>
+      <div class="education-grid">
+        <div class="edu-card">
+          <h3>BS Computer Science (7th Semester)</h3>
+          <p>The Education University, Attock</p>
+          <p>Current CGPA: <strong>3.44</strong> (Ongoing)</p>
+        </div>
+        <div class="edu-card">
+          <h3>FSC (ICS)</h3>
+          <p>Govt. Girls College Attock</p>
+          <p>758/1100 (2023)</p>
+        </div>
+        <div class="edu-card">
+          <h3>Matric (Science)</h3>
+          <p>Govt. Girls High School People's Colony, Attock</p>
+          <p>1019/1100 (2021)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-category="web">
+          <i class="fas fa-globe project-icon"></i>
+          <h3>Full‑Stack Website</h3>
+          <p>Full‑stack web app using Node.js, Express, MongoDB, HTML/CSS, JavaScript.</p>
+          <p><strong>Role:</strong> Solo developer</p>
+        </div>
+        <div class="project-card" data-category="ai">
+          <i class="fas fa-robot project-icon"></i>
+          <h3>AI Responsive Chatbot</h3>
+          <p>AI‑powered chatbot using Python.</p>
+          <p><strong>Role:</strong> Creator</p>
+        </div>
+        <div class="project-card" data-category="tools">
+          <i class="fas fa-file-alt project-icon"></i>
+          <h3>MS Office Documentation Suite</h3>
+          <p>Professional documentation, data management, presentations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills (tools) -->
+  <section id="tech-skills" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-item"><div class="skill-info"><span>Web Development</span><span>90%</span></div><div class="progress-bar"><div class="progress" style="width: 90%;"></div></div></div>
+        <div class="skill-item"><div class="skill-info"><span>Visual Studio</span><span>85%</span></div><div class="progress-bar"><div class="progress" style="width: 85%;"></div></div></div>
+        <div class="skill-item"><div class="skill-info"><span>MS Office (Word, Excel, PowerPoint)</span><span>88%</span></div><div class="progress-bar"><div class="progress" style="width: 88%;"></div></div></div>
+        <div class="skill-item"><div class="skill-info"><span>MongoDB</span><span>75%</span></div><div class="progress-bar"><div class="progress" style="width: 75%;"></div></div></div>
+        <div class="skill-item"><div class="skill-info"><span>Node.js</span><span>80%</span></div><div class="progress-bar"><div class="progress" style="width: 80%;"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soft Skills -->
+  <section id="soft-skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="soft-skills-grid">
+        <div class="soft-skill-card"><i class="fas fa-code"></i><span>Strong Programming Fundamentals</span></div>
+        <div class="soft-skill-card"><i class="fas fa-puzzle-piece"></i><span>Problem Solving</span></div>
+        <div class="soft-skill-card"><i class="fas fa-users"></i><span>Teamwork</span></div>
+        <div class="soft-skill-card"><i class="fas fa-clock"></i><span>Time Management</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2024 - Present</div><div class="timeline-content"><h3>Full‑Stack Developer (Academic)</h3><p>Node.js, Express, MongoDB</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2023 - Present</div><div class="timeline-content"><h3>MS Office Specialist</h3><p>Documentation, data analysis, presentations</p></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2024</div><div class="timeline-content"><h3>AI Chatbot Developer</h3><p>Python-based AI chatbot</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements" class="section">
+    <div class="container">
+      <h2 class="section-title">Achievements</h2>
+      <ul class="achievements-list">
+        <li><i class="fas fa-trophy"></i> CGPA 3.44 – strong academic performance</li>
+        <li><i class="fas fa-code"></i> Deployed full‑stack website (Node.js, Express, MongoDB)</li>
+        <li><i class="fas fa-award"></i> Merit in FSC (ICS) & Matric</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title">Testimonials</h2>
+      <div class="testimonials-slider">
+        <div class="testimonial-card active"><i class="fas fa-quote-left"></i><p>Hamna is a dedicated learner. Her full‑stack project demonstrated strong skills.</p><h4>— Professor</h4></div>
+        <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>Great problem-solving and teamwork abilities.</p><h4>— Project Supervisor</h4></div>
+      </div>
+      <div class="testimonial-dots"><span class="dot active" data-index="0"></span><span class="dot" data-index="1"></span></div>
+    </div>
+  </section>
+
+  <section id="blog" class="section">
+    <div class="container">
+      <h2 class="section-title">Blog / Articles</h2>
+      <ul class="blog-links">
+        <li><i class="fab fa-medium"></i> <a href="#">How I built my first full‑stack app</a> (coming soon)</li>
+        <li><i class="fab fa-dev"></i> <a href="#">Understanding Node.js for beginners</a> (coming soon)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="contact-wrapper">
+        <div class="contact-info editable-contact">
+          <p><i class="fas fa-envelope"></i> <span class="editable" data-key="email" contenteditable="true">hamnaaltaf23@gmail.com</span></p>
+          <p><i class="fas fa-phone-alt"></i> <span class="editable" data-key="phone" contenteditable="true">03313497818</span></p>
+          <p><i class="fas fa-map-marker-alt"></i> <span class="editable" data-key="location" contenteditable="true">Hamza town, Attock</span></p>
+          <p><i class="fab fa-linkedin"></i> <span class="editable" data-key="linkedin" contenteditable="true">linkedin.com/in/hamna-altaf</span></p>
+          <p><i class="fab fa-github"></i> <span class="editable" data-key="github" contenteditable="true">github.com/hamna-altaf</span></p>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+          <div class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-name">Hamna Altaf<br><span>IT Professional & Web Developer</span></div>
+      <div class="footer-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fas fa-phone-alt"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <div class="footer-copyright">© 2026 ALL RIGHTS RESERVED<br>CRAFTED WITH EXCELLENCE</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
