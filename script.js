@@ -121,7 +121,7 @@ if (contactForm) {
     e.preventDefault();
     const statusDiv = contactForm.querySelector('.form-status');
     statusDiv.textContent = 'Message sent successfully! (Demo)';
-    statusDiv.style.color = '#1e7e34';
+    statusDiv.style.color = '#1E3A5F';
     contactForm.reset();
     setTimeout(() => statusDiv.textContent = '', 3000);
   });
