@@ -815,4 +815,15 @@ footer {
 .footer-icons a:hover {
   transform: translateY(-5px) scale(1.15);
   color: #3B82F6;
+}/* Remove the default opacity:0 and transform from .section */
+.section {
+  padding: 100px 2rem 80px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* No opacity/transform – they are visible by default */
+}
+/* Keep the .reveal class for fallback, but we won't rely on it */
+.section.reveal {
+  /* No need to change, GSAP will handle */
 }

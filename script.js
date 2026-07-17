@@ -1,26 +1,23 @@
 // ===== GSAP + ScrollTrigger =====
 gsap.registerPlugin(ScrollTrigger);
 
-// Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
 
-  // ===== GSAP: Block Box Animations for Education Cards (3D flip effect) =====
+  // ===== Education Cards – Smooth slide-in (like Experience) =====
   gsap.from('.edu-card', {
     scrollTrigger: {
       trigger: '#educational',
       start: 'top 80%',
       toggleActions: 'play none none reset'
     },
-    duration: 1,
+    duration: 0.8,
     opacity: 0,
-    rotationY: 90,
-    scale: 0.8,
-    transformOrigin: 'center center',
-    stagger: 0.2,
-    ease: 'power3.out'
+    x: -50,
+    stagger: 0.15,
+    ease: 'power2.out'
   });
 
-  // ===== GSAP: Projects Section – Smooth Entrance with alternating sides =====
+  // ===== Projects – alternating side entrance =====
   gsap.from('.project-card', {
     scrollTrigger: {
       trigger: '#projects',
@@ -35,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ease: 'power3.out'
   });
 
-  // ===== GSAP: Skills Section – Block entrance =====
+  // ===== Skills – slide in =====
   gsap.from('.skill-item', {
     scrollTrigger: {
       trigger: '#tech-skills',
@@ -50,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ease: 'back.out(1.7)'
   });
 
-  // ===== GSAP: Soft Skills – Block entrance =====
+  // ===== Soft Skills – scale/rotate =====
   gsap.from('.soft-skill-card', {
     scrollTrigger: {
       trigger: '#soft-skills',
@@ -65,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ease: 'back.out(1.7)'
   });
 
-  // ===== GSAP: Timeline items – Slide in =====
+  // ===== Experience Timeline – slide from left =====
   gsap.from('.timeline-item', {
     scrollTrigger: {
       trigger: '#experience',
@@ -79,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ease: 'power2.out'
   });
 
-  // ===== GSAP: Achievements – Block entrance =====
+  // ===== Achievements – slide =====
   gsap.from('.achievements-list li', {
     scrollTrigger: {
       trigger: '#achievements',
@@ -93,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ease: 'power2.out'
   });
 
-  // ===== GSAP: Testimonials =====
+  // ===== Testimonials =====
   gsap.from('.testimonial-card', {
     scrollTrigger: {
       trigger: '#testimonials',
@@ -107,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ease: 'back.out(1.7)'
   });
 
-  // ===== GSAP: Contact section =====
+  // ===== Contact =====
   gsap.from('.contact-info, .contact-form', {
     scrollTrigger: {
       trigger: '#contact',
@@ -121,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ease: 'power2.out'
   });
 
-  // ===== Anime.js: Hero section entrance (vector style) =====
+  // ===== Hero entrance (Anime.js) =====
   anime({
     targets: '.highlight',
     translateX: [40, 0],
@@ -130,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
     duration: 1000,
     delay: 300
   });
-
   anime({
     targets: '.tagline',
     translateY: [25, 0],
@@ -139,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
     duration: 900,
     delay: 400
   });
-
   anime({
     targets: '.intro-text',
     translateY: [25, 0],
@@ -148,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function() {
     duration: 1000,
     delay: 500
   });
-
   anime({
     targets: '.btn-primary',
     scale: [0.7, 1],
@@ -158,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
     delay: 700
   });
 
-  // ===== Motion.dev: Background glow animation =====
+  // ===== Motion.dev: background glow =====
   const heroBg = document.querySelector('.hero');
   if (heroBg && window.Motion) {
     const { animate } = window.Motion;
@@ -174,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // ===== Motion.dev: Profile image glow loop =====
+  // ===== Profile image glow loop =====
   const profileImg = document.querySelector('.profile-img');
   if (profileImg && window.Motion) {
     const { animate } = window.Motion;
@@ -190,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // ===== Stats counter animation =====
+  // ===== Stats counter =====
   const statNumbers = document.querySelectorAll('.stat-number');
   let statsAnimated = false;
   function animateStats() {
@@ -217,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
     statsAnimated = true;
   }
 
-  // ===== Skill bars animation =====
+  // ===== Skill bars =====
   function animateSkills() {
     document.querySelectorAll('.progress').forEach(bar => {
       const width = bar.style.width;
@@ -226,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // ===== Scroll reveal fallback (triggers stats and skills) =====
+  // ===== Reveal check (for stats and skills) =====
   const sections = document.querySelectorAll('.section');
   function revealCheck() {
     sections.forEach(section => {
@@ -239,11 +233,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const techSec = document.getElementById('tech-skills');
     if (techSec && techSec.classList.contains('reveal')) animateSkills();
   }
-
   window.addEventListener('scroll', revealCheck);
   window.addEventListener('load', revealCheck);
 
-  // ===== Smooth scroll for anchor links =====
+  // ===== Smooth scroll =====
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
@@ -299,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // ===== Back to top button =====
+  // ===== Back to top =====
   const backBtn = document.getElementById('backToTop');
   if (backBtn) {
     window.addEventListener('scroll', () => {
@@ -323,7 +316,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// ===== Typing animation (kept separate for clean scope) =====
+// ===== Typing animation =====
 const typedTextSpan = document.querySelector('.typed-text');
 if (typedTextSpan) {
   const textArray = ['Full Stack Developer', 'Web Developer', 'Problem Solver', 'CS Student'];
