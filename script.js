@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  // ===== Education Cards – Smooth slide-in (like Experience) =====
+  // ===== Education Cards – Smooth slide-in =====
   gsap.from('.edu-card', {
     scrollTrigger: {
       trigger: '#educational',
@@ -17,20 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     ease: 'power2.out'
   });
 
-  // ===== Projects – alternating side entrance =====
-  gsap.from('.project-card', {
-    scrollTrigger: {
-      trigger: '#projects',
-      start: 'top 80%',
-      toggleActions: 'play none none reset'
-    },
-    duration: 0.9,
-    opacity: 0,
-    x: (i) => i % 2 === 0 ? -80 : 80,
-    scale: 0.85,
-    stagger: 0.15,
-    ease: 'power3.out'
-  });
+  // ===== SKILLS: Remove the problematic project animation =====
+  // Projects are now animated with CSS only – see style.css
 
   // ===== Skills – slide in =====
   gsap.from('.skill-item', {
@@ -340,17 +328,3 @@ if (typedTextSpan) {
   }
   type();
 }
-// ===== Projects – Smooth alternating side entrance =====
-gsap.from('.project-card', {
-  scrollTrigger: {
-    trigger: '#projects',
-    start: 'top 80%',
-    toggleActions: 'play none none reset'
-  },
-  duration: 0.9,
-  opacity: 0,
-  x: (i) => i % 2 === 0 ? -80 : 80,
-  scale: 0.85,
-  stagger: 0.15,
-  ease: 'power3.out'
-});
