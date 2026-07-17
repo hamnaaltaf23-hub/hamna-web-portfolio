@@ -340,3 +340,17 @@ if (typedTextSpan) {
   }
   type();
 }
+// ===== Projects – Smooth alternating side entrance =====
+gsap.from('.project-card', {
+  scrollTrigger: {
+    trigger: '#projects',
+    start: 'top 80%',
+    toggleActions: 'play none none reset'
+  },
+  duration: 0.9,
+  opacity: 0,
+  x: (i) => i % 2 === 0 ? -80 : 80,
+  scale: 0.85,
+  stagger: 0.15,
+  ease: 'power3.out'
+});
