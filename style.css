@@ -863,3 +863,50 @@ footer {
   box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
   border-color: #3B82F6;
 }
+/* Profile Image Section - reduced padding to remove empty space */
+.profile-image-section {
+  padding: 10px 1rem 20px 1rem;
+  min-height: auto;
+}
+
+/* Hero section - reduce bottom padding */
+.hero {
+  padding-top: 120px;
+  padding-bottom: 20px;
+}
+
+/* Hero content - remove extra gap */
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Value proposition text - new */
+.value-prop {
+  font-size: 1.15rem;
+  color: #1E3A5F;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #E8F0FE, #D6E4FF);
+  border-radius: 30px;
+  display: inline-block;
+  border-left: 4px solid #3B82F6;
+}
+
+/* Project links - clickable */
+.project-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #3B82F6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.project-link:hover {
+  color: #1E3A5F;
+}
+.project-link i {
+  margin-right: 0.3rem;
+}
